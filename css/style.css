@@ -1,0 +1,173 @@
+body {
+    background: #E5E5E5;
+}
+header{
+    margin: 20px 30px;
+}
+.items {
+    display: absolute;
+    width: 940px;
+    margin: 0 auto;
+    align-items: center;
+}
+.ahorcado{
+    position: absolute;
+    margin-left: 170px;
+    width: 570px;
+    height: 340px;
+    visibility: hidden;
+}
+.palabra-nueva {
+    display: absolute;
+    background-color: #E5E5E5;
+    color: #0A3871;
+    font-size: 25px;
+    resize: none;
+    border: none;
+    outline: none;
+    padding-left: 120px;
+    width: 100%;
+    height: 150px;
+    visibility: hidden;
+}
+
+.palabra-nueva::placeholder {
+    color: #0A3871;
+}
+.iniciar{
+    width: 250px;
+    height: 80px;
+    display:block;
+    margin: 0 auto;
+    background: #0A3871;
+    border: 1px solid #000;
+    color: #fff;
+    border-radius: 24px;
+    margin: 5px auto;
+    cursor: pointer;
+}
+.iniciar:hover{
+    background-color: #124a8f;
+}
+.agregar{
+    width: 220px;
+    height: 50px;
+    cursor: pointer;
+    display:block;
+    margin: 0 auto;
+    color: #0A3871;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+.agregar:hover{
+    background-color: #d3e6e7;
+}
+.posiciones{
+    position: absolute;
+    margin-left: 170px;
+    width: 570px;
+    height: 120px;
+    visibility: hidden;
+}
+.botones-agregar {
+    position: absolute;
+    padding-left: 120px;
+    margin: 70px 0 40px 0;
+    visibility: hidden;
+}
+
+.botones-agregar p {
+    font-size: 15px;
+}
+.guardar {
+    width: 250px;
+    height: 50px;
+    display: absolute;
+    background: #0A3871;
+    border: 1px solid #000;
+    color: #fff;
+    border-radius: 20px;
+    margin: 5px auto;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.guardar:hover {
+    background-color: #124a8f;
+}
+
+.cancelar {
+    cursor: pointer;
+    width: 250px;
+    height: 50px;
+    display: absolute;
+    color: #0A3871;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+}
+
+.cancelar:hover {
+    background-color: #d3e6e7;
+}
+.iniciar-2 {
+    width: 230px;
+    height: 50px;
+    display: absolute;
+    background: #0A3871;
+    border: 1px solid #000;
+    color: #fff;
+    border-radius: 20px;
+    margin: 5px auto;
+    cursor: pointer;
+    margin: 120px 5px 0 220px;
+    visibility: hidden;
+}
+
+.iniciar-2:hover {
+    background-color: #124a8f;
+}
+.desistir {
+    cursor: pointer;
+    width: 230px;
+    height: 50px;
+    display: absolute;
+    color: #0A3871;
+    background: #D8DFE8;
+    border: 1px solid #0A3871;
+    border-radius: 20px;
+    margin-left: 5px;
+    visibility: hidden;
+}
+.desistir:hover {
+    background-color: #d3e6e7;
+}
+
+footer{
+    width: 940px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+@media screen and (max-width:320px){
+    
+}
+@media screen and (min-width:321px) and (max-width:480px) {
+    
+}
+@media screen and (min-width:481px) and (max-width:768px) {
+    
+}
+
+@media screen and (min-width:769px) and (max-width:1024px) {
+    
+}
+
+@media screen and (min-width:1025px) and (max-width:1200px) {
+   
+}
+@media screen and (min-width:1201px) and (max-width:1280px){
+    
+}
