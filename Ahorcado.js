@@ -6,6 +6,7 @@ const advertencia = document.querySelector("p");
 const cancelar = document.querySelector(".cancelar");
 const desistir = document.querySelector(".desistir");
 const nuevo = document.querySelector(".iniciar-2");
+const input = document.querySelector(".este");
 var pantalla = document.querySelector(".posiciones");
 var pincel = pantalla.getContext("2d");
 
@@ -30,6 +31,7 @@ function botonIniciar(){
     pantalla2.style.visibility = "visible";
     nuevo.style.visibility="visible";
     desistir.style.visibility="visible";
+    input.style.visibility = "visible";
     pal = palabraAdivinar[Math.floor(Math.random() * (max - min + 1)) + min];
     letras = pal.length;
     pincel.fillStyle = "#0A3871";
