@@ -6,7 +6,8 @@ const advertencia = document.querySelector("p");
 const cancelar = document.querySelector(".cancelar");
 const desistir = document.querySelector(".desistir");
 const nuevo = document.querySelector(".iniciar-2");
-const input = document.querySelector(".este");
+const teclado = document.querySelector(".teclado");
+const letra = document.querySelectorAll(".boton");
 var pantalla = document.querySelector(".posiciones");
 var pincel = pantalla.getContext("2d");
 
@@ -15,6 +16,7 @@ var pincel2 = pantalla2.getContext("2d");
 
 let palabraAdivinar = ['HOLA','POLA','CREAR','SILLA','AMOR','HTML', 'VIDA','AVIONETA','AMARILLO'];
 let jugar = false;
+
 function botonIniciar(){
     pincel.clearRect(0,0,570,140);
     const min = Math.ceil(0);
@@ -31,7 +33,7 @@ function botonIniciar(){
     pantalla2.style.visibility = "visible";
     nuevo.style.visibility="visible";
     desistir.style.visibility="visible";
-    input.style.visibility = "visible";
+    
     pal = palabraAdivinar[Math.floor(Math.random() * (max - min + 1)) + min];
     letras = pal.length;
     pincel.fillStyle = "#0A3871";
@@ -56,7 +58,92 @@ function botonIniciar(){
   pincel2.fillStyle = "#0A3871";
   pincel2.beginPath();
   pincel2.fillRect(100, 130, 100, 3);
-  letrasVerificar(pal,false);
+  letrasVerificar(pal);
+  tecladoVerificar(pal);
+}
+
+function tecladoVerificar(pal) {
+  jugar = false;
+  let valor = 50;
+  let bool = false;
+  let ingresados = [];
+  let correcto = [];
+  let ganaste = 0;
+  let esCorrecto = 0;
+  pincel.lineWidth = 2;
+  const letraPresionada = function (event){
+    pincel.strokeStyle = "#0A3871";
+    pincel.font = "bold 34px sans-serif";
+    if (ingresados.length < 9 && ganaste < pal.length) {
+      let validar = false;
+      if (pal.includes(this.innerText)) {
+        for (let n = 0; n < correcto.length; n++) {
+          if (this.innerText == correcto[n]) {
+            validar = true;
+          }
+        }
+        if (validar == false) {
+          correcto.push(this.innerText);
+          for (let k = 0; k < pal.length; k++) {
+            if (pal[k] == this.innerText) {
+              ganaste++;
+              if (ganaste == pal.length) {
+                ganar();
+                jugar = true;
+              }
+              if (pal.length == 4) {
+                esCorrecto = (k + 1) * 52;
+              } else if (pal.length == 5) {
+                esCorrecto = (k + 1) * 52;
+              } else if (pal.length == 6) {
+                esCorrecto = (k + 1) * 40;
+              } else if (pal.length == 7) {
+                esCorrecto = (k + 1) * 37;
+              } else if (pal.length == 8) {
+                esCorrecto = (k + 1) * 34;
+              }
+              pincel.strokeText(this.innerText, esCorrecto, 50, 20);
+            }
+          }
+        }
+      }
+      if (!pal.includes(this.innerText)) {
+        if (bool == false) {
+          ingresados.push(this.innerText);
+          pincel.strokeText(this.innerText, valor, 130, 20);
+          bool = true;
+        } else {
+          let bandera = false;
+          for (let i = 0; i < ingresados.length; i++) {
+            if (this.innerText == ingresados[i]) {
+              bandera = true;
+            }
+          }
+
+          if (bandera == false) {
+            if (this.innerText== "I") {
+              valor += 20;
+              pincel.strokeText(this.innerText, valor, 130, 20);
+              ingresados.push(this.innerText);
+              valor += -10;
+            } else {
+              valor += 20;
+              pincel.strokeText(this.innerText, valor, 130, 20);
+              ingresados.push(this.innerText);
+            }
+          }
+        }
+        ahorcado(ingresados.length);
+        if (ingresados.length == 9) {
+          perdiste(pal);
+          jugar = true;
+        }
+      }
+    }
+  };
+  letra.forEach((boton) => {
+    boton.addEventListener("click", letraPresionada);
+  });
 }
 
 function letrasVerificar(pal){

@@ -50,19 +50,6 @@ header{
 .iniciar:hover{
     background-color: #124a8f;
 }
-.este{
-    display: absolute;
-    background-color: #E5E5E5;
-    color: #0A3871;
-    font-size: 25px;
-    resize: none;
-    border: none;
-    outline: none;
-    padding-left: 120px;
-    width: 50%;
-    height: 150px;
-    visibility: hidden;
-}
 .agregar{
     width: 220px;
     height: 50px;
@@ -157,7 +144,9 @@ header{
 .desistir:hover {
     background-color: #d3e6e7;
 }
-
+.teclado{
+    visibility: hidden;
+}
 footer{
     width: 940px;
     margin: 20px auto 0 auto;
@@ -178,6 +167,7 @@ footer{
         margin: 80px 0 0 0px;
         width: 300px;
     }
+    
     .palabra-nueva{
         padding-left: 0;
         width: 300px;
@@ -210,6 +200,14 @@ footer{
     .cancelar{
         width: 150px;
         height: 50px;
+    }
+    .teclado {
+        display: absolute;
+        background: #0A3871;
+        width: 300px;
+        border: 1px solid black;
+        visibility: visible;
+        margin: 5px 0 0 30px;
     }
     footer {
         width: 210px;
