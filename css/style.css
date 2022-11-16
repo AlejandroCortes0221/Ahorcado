@@ -10,6 +10,7 @@ header{
     margin: 0 auto;
     align-items: center;
 }
+/*Canvas donde se construye el ahorcado */
 .ahorcado{
     position: absolute;
     margin-left: 170px;
@@ -26,7 +27,7 @@ header{
     border: none;
     outline: none;
     padding-left: 120px;
-    width: 100%;
+    width: 50%;
     height: 150px;
     visibility: hidden;
 }
@@ -120,7 +121,6 @@ header{
     border: 1px solid #000;
     color: #fff;
     border-radius: 20px;
-    margin: 5px auto;
     cursor: pointer;
     margin: 120px 5px 0 220px;
     visibility: hidden;
@@ -155,18 +155,98 @@ footer{
     
 }
 @media screen and (min-width:321px) and (max-width:480px) {
-    
+    .items {
+        display: absolute;
+        width: 300px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .ahorcado {
+        margin: 80px 0 0 0px;
+        width: 300px;
+    }
+    .palabra-nueva{
+        padding-left: 0;
+        width: 300px;
+    }
+    .posiciones {
+        margin-top: 10px;
+        margin-left: 0;
+        width: 300px;
+    }
+    .iniciar{
+        margin-top: 50px;
+    }
+    .iniciar-2 {
+        margin: 130px 5px 0 10px;
+        width: 120px;
+        height: 50px;
+    }
+    .desistir{
+        width: 120px;
+        height: 50px;
+    }
+    .botones-agregar{
+        padding: 0;
+    }
+    .guardar{
+        margin: 0 5px 0 0;
+        width: 150px;
+        height: 50px;
+    }
+    .cancelar{
+        width: 150px;
+        height: 50px;
+    }
+    footer {
+        width: 210px;
+        margin: 30px auto 0 auto;
+        text-align: center;
+    }
+
 }
 @media screen and (min-width:481px) and (max-width:768px) {
     
 }
 
 @media screen and (min-width:769px) and (max-width:1024px) {
-    
+    .items {
+        display: relative;
+        width: 780px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .ahorcado {
+        margin: 180px 0 0 130px;
+    }
+    .posiciones {
+        margin-left: 130px;
+    }
+    .iniciar{
+        margin-top: 180px;
+    }
+    .iniciar-2 {
+        margin: 120px 5px 0 190px;
+    }
+   footer {
+        width: 470px;
+        margin: 30px auto 0 auto;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width:1025px) and (max-width:1200px) {
-   
+    .items {
+        display: absolute;
+        width: 940px;
+        margin: 80px auto 0 auto;
+        align-items: center;
+    }
+   footer {
+        width: 940px;
+        margin: 50px auto 0 auto;
+        text-align: center;
+    }
 }
 @media screen and (min-width:1201px) and (max-width:1280px){
     
