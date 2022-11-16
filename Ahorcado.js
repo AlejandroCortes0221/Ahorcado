@@ -306,6 +306,7 @@ function botonGuardarEmpezar(){
         pincel2.beginPath();
         pincel2.fillRect(100, 130, 100, 3);
         letrasVerificar(pal);
+        tecladoVerificar(pal);
     }
 }
 
