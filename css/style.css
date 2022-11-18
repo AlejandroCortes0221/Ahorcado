@@ -207,7 +207,14 @@ footer{
         width: 300px;
         border: 1px solid black;
         visibility: visible;
-        margin: 5px 0 0 30px;
+        margin: 10px 0 0 30px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    .boton{
+        background: #E5E5E5;
+    }
+    .boton:hover{
+        background: #dbd4d4;
     }
     footer {
         width: 210px;
