@@ -146,6 +146,8 @@ header{
 }
 .teclado{
     visibility: hidden;
+    margin: 0;
+    height:2px;
 }
 footer{
     width: 940px;
@@ -158,13 +160,13 @@ footer{
 }
 @media screen and (min-width:321px) and (max-width:480px) {
     .items {
-        display: absolute;
+        display: relative;
         width: 300px;
         margin: 0 auto;
         align-items: center;
     }
     .ahorcado {
-        margin: 80px 0 0 0px;
+        margin: 80px auto 0 auto;
         width: 300px;
     }
     
@@ -173,8 +175,7 @@ footer{
         width: 300px;
     }
     .posiciones {
-        margin-top: 10px;
-        margin-left: 0;
+        margin: 0 auto;
         width: 300px;
     }
     .iniciar{
@@ -205,6 +206,7 @@ footer{
         display: absolute;
         background: #0A3871;
         width: 300px;
+        height: auto;
         border: 1px solid black;
         visibility: visible;
         margin: 9px auto 0 auto;
@@ -224,29 +226,93 @@ footer{
 
 }
 @media screen and (min-width:481px) and (max-width:768px) {
+    .items {
+        display: relative;
+        width: 481px;
+        margin: 0 auto;
+        align-items: center;
+    }
+    .palabra-nueva{
+        padding-left: 0;
+        width: 300px;
+    }
+    .botones-agregar{
+        padding-left: 0;
+    }
+    .ahorcado {
+        width: 481px;
+        margin: 130px auto 0 auto;
+    }
     
+    .posiciones {
+        width: 481px;
+        margin: 0 auto;
+    }
+    
+    .iniciar {
+        margin-top: 110px;
+    }
+    
+    .iniciar-2 {
+        margin: 120px 5px 0 0;
+    }
+    
+    .teclado {
+        display: absolute;
+        background: #0A3871;
+        width: 300px;
+        height: auto;
+        border: 1px solid black;
+        visibility: visible;
+        margin: 10px auto 0 auto;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    .boton{
+        background: #E5E5E5;
+    }
+    .boton:hover{
+        background: #dbd4d4;
+    }
+    
+    footer {
+        width: 470px;
+        margin: 30px auto 0 auto;
+        text-align: center;
+    }
 }
 
 @media screen and (min-width:769px) and (max-width:1024px) {
     .items {
         display: relative;
-        width: 780px;
+        width: 769px;
         margin: 0 auto;
         align-items: center;
     }
     .ahorcado {
-        margin: 180px 0 0 130px;
+        width: 769px;
+        margin: 180px auto 0 auto;
     }
     .posiciones {
-        margin-left: 130px;
+        width: 769px;
+        margin: 0 auto;
     }
     .iniciar{
         margin-top: 180px;
     }
     .iniciar-2 {
-        margin: 120px 5px 0 190px;
+        margin: 180px 30px 10px 160px;
     }
-   footer {
+    .teclado {
+        display: absolute;
+        background: #0A3871;
+        width: 300px;
+        height: auto;
+        border: 1px solid black;
+        visibility: visible;
+        margin: 50px auto 0 auto;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    }
+    footer {
         width: 470px;
         margin: 30px auto 0 auto;
         text-align: center;
@@ -256,16 +322,48 @@ footer{
 @media screen and (min-width:1025px) and (max-width:1200px) {
     .items {
         display: absolute;
-        width: 940px;
+        width: 1025px;
         margin: 80px auto 0 auto;
         align-items: center;
     }
+    .ahorcado {
+        width: 1025px;
+        margin: 180px auto 0 auto;
+    }
+    .posiciones {
+        width: 1025px;
+        margin: 0 auto;
+    }
+    .iniciar{
+        margin-top: 50px;
+    }
    footer {
-        width: 940px;
+        width: 1025px;
         margin: 50px auto 0 auto;
         text-align: center;
     }
 }
 @media screen and (min-width:1201px) and (max-width:1280px){
-    
+    .items {
+        display: absolute;
+        width: 1201px;
+        margin: 80px auto 0 auto;
+        align-items: center;
+    }
+    .ahorcado {
+        width: 1025px;
+        margin: 180px auto 0 auto;
+    }
+    .posiciones {
+        width: 1201px;
+        margin: 0 auto;
+    }
+    .iniciar{
+        margin-top: 50px;
+    }
+   footer {
+        width: 1201px;
+        margin: 50px auto 0 auto;
+        text-align: center;
+    }
 }

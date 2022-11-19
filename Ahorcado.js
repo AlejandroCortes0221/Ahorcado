@@ -14,7 +14,7 @@ var pincel = pantalla.getContext("2d");
 var pantalla2 = document.querySelector(".ahorcado");
 var pincel2 = pantalla2.getContext("2d");
 
-let palabraAdivinar = ['HOLA','POLA','CREAR','SILLA','AMOR','HTML', 'VIDA','AVIONETA','AMARILLO'];
+let palabraAdivinar = ['HOLA','CORRER','CREAR','SILLA','AMOR','HTML','VIDA','AVIONETA','AMARILLO'];
 let jugar = false;
 
 function botonIniciar(){
